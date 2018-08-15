@@ -1,0 +1,100 @@
+.Navbar {
+  background: $highlight_color;
+  clip-path: polygon(0 100%, 100% 65vh, 100% 0, 0 0);
+  @include breakpoint(phablet) {
+    clip-path: polygon(0 100%, 100% 60vh, 100% 0, 0 0);
+  }
+  @include breakpoint(tablet) {
+    clip-path: polygon(0 100%, 100% 55vh, 100% 0, 0 0);
+  }
+  color: white;
+  height: 75vh;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin-bottom: 30px;
+
+    .Navbar__logo {
+      width: 50px;
+    }
+
+    .Navbar__link-list {
+      display: none;
+      @include breakpoint(tablet) {
+        display: flex;
+      }
+
+      .Navbar__link {
+        margin-left: 15px;
+        color: white;
+        font-family: $header-font-stack;
+        text-transform: uppercase;
+        font-size: $content;
+        font-weight: 400;
+        letter-spacing: 3px;
+      }
+    }
+  }
+
+  &__name {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: $header-font-stack;
+    margin-top: 10vh;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(phablet) {
+      flex-direction: row;
+    }
+    background: $highlight_color;
+    color: white;
+    font-size: $content;
+
+    .divider {
+      width: 2px;
+      height: $content;
+      background: white;
+      display: none;
+      @include breakpoint(phablet) {
+        display: block;
+        margin: 10px 15px;
+      }
+    }
+
+    .Navbar__info.link {
+      color: white;
+      text-decoration: none;
+
+      h5 {
+        font-weight: 300;
+        margin-top: 5px;
+        letter-spacing: 1px;
+        @include breakpoint(phablet) {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    border: 1px solid $background-color;
+    color: $highlight-color;
+    background: $background-color;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: $content;
+    font-family: $header-font-stack;
+    font-weight: 800;
+    letter-spacing: 3px;
+    outline: none;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,29 @@
+.Content1 {
+  // clip-path: polygon(0 18%, 100% 0, 100% 81%, 0% 100%);
+  padding: 10vh 0;
+  font-size: $content;
+  color: black;
+  display: flex;
+  justify-content: flex-end;
+  .container {
+    .header {
+      margin-bottom: 20px;
+      width: 100%;
+      @include breakpoint(tablet) {
+        width: 50%;
+      }
+      font-size: $header;
+      color: $highlight-color;
+    }
+    .subheader {
+      font-size: $subheader;
+      line-height: 1.5em;
+      width: 100%;
+      @include breakpoint(tablet) {
+        width: 50%;
+      }
+      color: $body-color;
+      font-weight: 300;
+    }
+  }
+}
