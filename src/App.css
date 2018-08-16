@@ -204,8 +204,8 @@ body {
         color: white;
         font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
         text-transform: uppercase;
-        font-size: 0.85em;
-        font-weight: 400;
+        font-size: 0.75em;
+        font-weight: 800;
         letter-spacing: 3px; }
   .Navbar__name {
     font-size: 3em;
@@ -218,7 +218,8 @@ body {
     flex-direction: column;
     background: #6a6adf;
     color: white;
-    font-size: 0.85em; }
+    font-size: 0.85em;
+    margin-bottom: 20px; }
     @media (min-width: 37.5em) {
       .Navbar__contact {
         flex-direction: row; } }
@@ -247,7 +248,6 @@ body {
     background: #efefff;
     border-radius: 4px;
     padding: 10px;
-    margin-top: 20px;
     font-size: 0.85em;
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: 800;
@@ -261,20 +261,29 @@ body {
   color: black;
   display: flex;
   justify-content: flex-end; }
-  .Content1 .container .header {
-    margin-bottom: 20px;
-    width: 100%;
-    font-size: 2em;
-    color: #6a6adf; }
-    @media (min-width: 50em) {
-      .Content1 .container .header {
-        width: 50%; } }
-  .Content1 .container .subheader {
-    font-size: 1.3em;
-    line-height: 1.5em;
-    width: 100%;
-    color: #525f7f;
-    font-weight: 300; }
-    @media (min-width: 50em) {
-      .Content1 .container .subheader {
-        width: 50%; } }
+  .Content1 .container .body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start; }
+    .Content1 .container .body .Content1__content .header {
+      margin-bottom: 20px;
+      font-size: 2em;
+      color: #6a6adf; }
+    .Content1 .container .body .Content1__content .subheader {
+      font-size: 1.3em;
+      line-height: 1.5em;
+      color: #525f7f;
+      font-weight: 300; }
+    @media (min-width: 64em) {
+      .Content1 .container .body .Content1__content {
+        flex: 1; } }
+    .Content1 .container .body .svg {
+      width: 100%;
+      max-width: 300px;
+      margin: 30px auto 0; }
+      @media (min-width: 64em) {
+        .Content1 .container .body .svg {
+          flex: 3;
+          max-width: 500px;
+          margin-left: 40px; } }

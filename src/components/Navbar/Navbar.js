@@ -36,7 +36,12 @@ class Navbar extends Component {
               <h5>brandon.k.chung@gmail.com</h5>
             </a>
           </div>
-          <button className="Navbar__cta">I LIKE YOU</button>
+          <a
+            href="mailto:brandon.k.chung@gmail.com"
+            className="Navbar__cta link"
+          >
+            HIRE ME
+          </a>
         </div>
       </div>
     );

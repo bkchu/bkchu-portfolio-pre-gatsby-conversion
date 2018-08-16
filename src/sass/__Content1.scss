@@ -6,24 +6,37 @@
   display: flex;
   justify-content: flex-end;
   .container {
-    .header {
-      margin-bottom: 20px;
-      width: 100%;
-      @include breakpoint(tablet) {
-        width: 50%;
+    .body {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      .Content1__content {
+        .header {
+          margin-bottom: 20px;
+          font-size: $header;
+          color: $highlight-color;
+        }
+        .subheader {
+          font-size: $subheader;
+          line-height: 1.5em;
+          color: $body-color;
+          font-weight: 300;
+        }
+        @include breakpoint(laptop) {
+          flex: 1;
+        }
       }
-      font-size: $header;
-      color: $highlight-color;
-    }
-    .subheader {
-      font-size: $subheader;
-      line-height: 1.5em;
-      width: 100%;
-      @include breakpoint(tablet) {
-        width: 50%;
+      .svg {
+        width: 100%;
+        max-width: 300px;
+        margin: 30px auto 0;
+        @include breakpoint(laptop) {
+          flex: 3;
+          max-width: 500px;
+          margin-left: 40px;
+        }
       }
-      color: $body-color;
-      font-weight: 300;
     }
   }
 }
