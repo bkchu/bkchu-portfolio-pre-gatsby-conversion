@@ -1,7 +1,6 @@
 .Content1 {
   // clip-path: polygon(0 18%, 100% 0, 100% 81%, 0% 100%);
   padding: 10vh 0;
-  font-size: $content;
   color: black;
   display: flex;
   justify-content: flex-end;
@@ -18,23 +17,23 @@
           color: $highlight-color;
         }
         .subheader {
-          font-size: $subheader;
-          line-height: 1.5em;
-          color: $body-color;
-          font-weight: 300;
+          @include fonting($header-font-stack, $w: 300, $lh: 1.3em);
         }
-        @include breakpoint(laptop) {
-          flex: 1;
+        @include breakpoint(desktop) {
+          text-align: right;
+          flex: 2;
         }
       }
       .svg {
         width: 100%;
         max-width: 300px;
         margin: 30px auto 0;
-        @include breakpoint(laptop) {
-          flex: 3;
+
+        @include breakpoint(desktop) {
+          flex: 2;
           max-width: 500px;
           margin-left: 40px;
+          margin-top: 0;
         }
       }
     }

@@ -8,10 +8,7 @@ class Content1 extends Component {
         <div className="container">
           <div className="body">
             <div className="Content1__content">
-              <h1 className="header">
-                I like to make things that work, and make things that work look
-                good.
-              </h1>
+              <h1 className="header">Function with form.</h1>
               <p className="subheader">
                 As a developer and a designer, achieving function with form is
                 the motto I live and code by. I'm passionate about weaving crisp

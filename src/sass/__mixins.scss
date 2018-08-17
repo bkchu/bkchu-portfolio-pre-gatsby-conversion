@@ -21,3 +21,17 @@
     }
   }
 }
+
+@mixin fonting(
+  $f: $subheader-font-stack,
+  $s: 1em,
+  $w: 400,
+  $ls: 0px,
+  $lh: 1em
+) {
+  font-family: $f;
+  font-size: $s;
+  font-weight: $w;
+  letter-spacing: $ls;
+  line-height: $lh;
+}
