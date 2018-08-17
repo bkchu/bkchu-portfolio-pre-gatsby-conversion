@@ -36,12 +36,12 @@ class Navbar extends Component {
               <h5>brandon.k.chung@gmail.com</h5>
             </a>
           </div>
-          <a
+          {/* <a
             href="mailto:brandon.k.chung@gmail.com"
             className="Navbar__cta link"
           >
             HIRE ME
-          </a>
+          </a> */}
         </div>
       </div>
     );

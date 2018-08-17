@@ -9,13 +9,31 @@
   }
   color: white;
   height: 75vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #4e54c8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #8f94fb,
+    #4e54c8
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #8f94fb,
+    #4e54c8
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   &__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 20px;
+    padding: 20px 20px 0;
     margin-bottom: 30px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 
     .Navbar__logo {
       width: 50px;
@@ -44,7 +62,6 @@
     text-transform: uppercase;
     font-weight: 800;
     font-family: $header-font-stack;
-    margin-top: 10vh;
   }
 
   &__contact {
@@ -53,7 +70,7 @@
     @include breakpoint(phablet) {
       flex-direction: row;
     }
-    background: $highlight_color;
+
     color: white;
     font-size: $content;
     margin-bottom: 20px;
