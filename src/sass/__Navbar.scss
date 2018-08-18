@@ -7,6 +7,7 @@
   @include breakpoint(tablet) {
     clip-path: polygon(0 100%, 100% 55vh, 100% 0, 0 0);
   }
+  z-index: 100;
   color: white;
   height: 75vh;
   width: 100%;

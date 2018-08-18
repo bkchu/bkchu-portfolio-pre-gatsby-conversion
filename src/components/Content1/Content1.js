@@ -18,7 +18,7 @@ class Content1 extends Component {
                 to enjoy learning and building new things everyday.
               </p>
             </div>
-            <img src={svg1} className="svg" alt="productive image" />
+            <img src={svg1} className="svg" alt="productive" />
           </div>
         </div>
       </div>

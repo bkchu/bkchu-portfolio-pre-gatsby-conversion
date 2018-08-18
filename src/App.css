@@ -178,6 +178,7 @@ body {
 .Navbar {
   background: #6a6adf;
   clip-path: polygon(0 100%, 100% 65vh, 100% 0, 0 0);
+  z-index: 100;
   color: white;
   height: 75vh;
   width: 100%;
@@ -265,6 +266,57 @@ body {
     letter-spacing: 3px;
     outline: none;
     cursor: pointer; }
+
+.NavbarMobile .NavbarMobile__nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 224px;
+  background: #edeaf4;
+  transform: translateX(100%);
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
+
+.NavbarMobile .NavbarMobile__nav.NavbarMobile__nav--open {
+  transform: translateX(0);
+  box-shadow: -4px 0px 160px -22px #484848; }
+
+.NavbarMobile div#burger {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 1;
+  cursor: pointer; }
+  @media (min-width: 50em) {
+    .NavbarMobile div#burger {
+      display: none; } }
+  .NavbarMobile div#burger.is-active span {
+    background-color: #6a6adf;
+    transition: all 0.6s cubic-bezier(0.54, 0.1, 0.42, 1.48), width 0.6s ease-in; }
+    .NavbarMobile div#burger.is-active span:first-child {
+      transform: rotate(45deg) translate(4px, -8px); }
+    .NavbarMobile div#burger.is-active span:nth-child(2) {
+      transform: rotate(-45deg); }
+    .NavbarMobile div#burger.is-active span:last-child {
+      transform: rotate(45deg) translate(15px, -11px);
+      width: 25px; }
+
+.NavbarMobile span {
+  display: block;
+  height: 5px;
+  background-color: #efefff;
+  border-radius: 100px;
+  transition: all 0.6s cubic-bezier(0.54, 0.1, 0.42, 1.48), width 0.6s ease-out; }
+  .NavbarMobile span:not(:last-child) {
+    margin-bottom: 10px; }
+  .NavbarMobile span:first-child {
+    transform-origin: 0 50%;
+    width: 25px; }
+  .NavbarMobile span:nth-child(2) {
+    width: 50px; }
+  .NavbarMobile span:last-child {
+    transform-origin: 100% 50%;
+    width: 45px; }
 
 .Content1 {
   padding: 10vh 0;
