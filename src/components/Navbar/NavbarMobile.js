@@ -33,6 +33,12 @@ class NavbarMobile extends Component {
   render() {
     return (
       <div className="NavbarMobile">
+        {this.state.open && (
+          <div
+            onClick={() => this.setState({ open: false })}
+            className="NavbarMobile__modal"
+          />
+        )}
         <div
           onClick={() => this.setState(({ open }) => ({ open: !open }))}
           className={this.state.open && 'is-active'}
