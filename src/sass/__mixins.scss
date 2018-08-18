@@ -27,11 +27,13 @@
   $s: 1em,
   $w: 400,
   $ls: 0px,
-  $lh: 1em
+  $lh: 1em,
+  $tt: none
 ) {
   font-family: $f;
   font-size: $s;
   font-weight: $w;
   letter-spacing: $ls;
   line-height: $lh;
+  text-transform: $tt;
 }
