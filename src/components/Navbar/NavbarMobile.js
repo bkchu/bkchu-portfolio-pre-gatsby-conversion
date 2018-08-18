@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class NavbarMobile extends Component {
   state = {
@@ -13,18 +14,18 @@ class NavbarMobile extends Component {
         ].join(' ')}
       >
         <div className="NavbarMobile__links">
-          <a className="NavbarMobile__link link" href="">
+          <Link to="/" className="NavbarMobile__link link">
             Home
-          </a>
-          <a className="NavbarMobile__link link" href="">
-            Portfolio
-          </a>
-          <a className="NavbarMobile__link link" href="">
+          </Link>
+          <Link to="/projects" className="NavbarMobile__link link">
+            Projects
+          </Link>
+          <Link to="/" className="NavbarMobile__link link">
             Skills
-          </a>
-          <a className="NavbarMobile__link link" href="">
+          </Link>
+          <Link to="/" className="NavbarMobile__link link">
             Experience
-          </a>
+          </Link>
         </div>
       </div>
     );

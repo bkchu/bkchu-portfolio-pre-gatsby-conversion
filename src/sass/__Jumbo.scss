@@ -1,0 +1,71 @@
+.Jumbo {
+  background: $highlight_color;
+  clip-path: polygon(0 100%, 100% 65vh, 100% 0, 0 0);
+  @include breakpoint(phablet) {
+    clip-path: polygon(0 100%, 100% 60vh, 100% 0, 0 0);
+  }
+  @include breakpoint(tablet) {
+    clip-path: polygon(0 100%, 100% 55vh, 100% 0, 0 0);
+  }
+  // z-index: 100;
+  color: white;
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #4e54c8; /* fallback for old browsers */
+  background: linear-gradient(to left, #8f94fb, #4e54c8);
+  &__name {
+    @include fonting($header-font-stack, $s: 3em, $w: 800, $tt: uppercase);
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(phablet) {
+      flex-direction: row;
+    }
+
+    color: white;
+    font-size: $content;
+    margin-bottom: 20px;
+
+    .divider {
+      width: 2px;
+      height: $content;
+      background: white;
+      display: none;
+      @include breakpoint(phablet) {
+        display: block;
+        margin: 10px 15px;
+      }
+    }
+
+    .Jumbo__info.link {
+      color: white;
+      text-decoration: none;
+
+      h5 {
+        font-weight: 300;
+        margin-top: 5px;
+        letter-spacing: 1px;
+        @include breakpoint(phablet) {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+  &__cta {
+    border: 1px solid $background-color;
+    color: $highlight-color;
+    background: $background-color;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: $content;
+    font-family: $header-font-stack;
+    font-weight: 800;
+    letter-spacing: 3px;
+    outline: none;
+    cursor: pointer;
+  }
+}

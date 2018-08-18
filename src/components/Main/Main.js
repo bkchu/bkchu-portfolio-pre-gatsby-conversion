@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import Navbar from '../Navbar/Navbar';
 import NavBarMobile from '../Navbar/NavbarMobile';
-import Content1 from '../Content1/Content1';
+import Routes from '../Routes/Routes';
 
-class Porfolio extends Component {
+class Main extends Component {
   render() {
     return (
-      <div className="Portfolio">
+      <div className="Main">
         <Navbar />
         <NavBarMobile />
-        <Content1 />
+        <Routes />
       </div>
     );
   }
 }
 
-export default Porfolio;
+export default Main;

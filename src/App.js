@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import Portfolio from './components/Portfolio/Portfolio';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Main from './components/Main/Main';
 import './App.css';
 
 class App extends Component {
   render() {
-    return <Portfolio />;
+    return (
+      <Router>
+        <Main />
+      </Router>
+    );
   }
 }
 

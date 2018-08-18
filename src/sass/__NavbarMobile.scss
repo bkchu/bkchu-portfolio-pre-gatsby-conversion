@@ -5,6 +5,7 @@
     right: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 100;
     // background: pink;
   }
   &__nav {
@@ -16,6 +17,7 @@
     background: rgb(237, 234, 244);
     transform: translateX(100%);
     transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    z-index: 200;
 
     .NavbarMobile__links {
       // border: 2px solid red;
@@ -44,13 +46,14 @@
   .NavbarMobile__nav.NavbarMobile__nav--open {
     transform: translateX(0);
     box-shadow: -4px 0px 160px -22px #484848;
+    z-index: 200;
   }
 
   div#burger {
     position: fixed;
     top: 25px;
     right: 25px;
-    z-index: 1;
+    z-index: 300;
     cursor: pointer;
     @include breakpoint(tablet) {
       display: none;
