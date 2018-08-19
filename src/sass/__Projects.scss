@@ -5,7 +5,10 @@
 
   .Project {
     color: $body-color;
-
+    border: 1px solid $background-color;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 20px 65px -22px #b3b0d6;
     &__title {
       color: $highlight-color;
       @include fonting($s: $subheader, $lh: 1.2em);
