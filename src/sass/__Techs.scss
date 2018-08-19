@@ -1,4 +1,17 @@
 .Techs {
+  display: flex;
+  flex-wrap: wrap;
   &__tech {
+    border: 1px solid $body-color;
+    @include fonting($header-font-stack, $s: 0.7em, $w: 300);
+    padding: 10px;
+    border-radius: 4px;
+    margin: 3px;
+    transition: all 200ms;
+    &:hover {
+      color: white;
+      background: $highlight-color;
+      border-color: $highlight-color;
+    }
   }
 }

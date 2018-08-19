@@ -1,10 +1,27 @@
 .Projects {
+  display: grid;
+  grid: auto-flow / repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+
   .Project {
+    color: $body-color;
+
     &__title {
+      color: $highlight-color;
+      @include fonting($s: $subheader, $lh: 1.2em);
     }
+
     &__year {
+      @include fonting($header-font-stack, $s: $content, $lh: 2em);
     }
+    &__link.link {
+      color: $highlight-color;
+      @include fonting($header-font-stack, $s: 0.8em, $ls: 1px, $w: 300);
+    }
+
     &__description {
+      @include fonting($s: $content, $w: 300, $lh: 1.2em);
+      margin-bottom: 20px;
     }
   }
 }
