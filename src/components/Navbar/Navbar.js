@@ -18,10 +18,10 @@ class Navbar extends Component {
             <Link to="/projects" className="Navbar__link link">
               Projects
             </Link>
-            <Link to="/" className="Navbar__link link">
+            <Link to="/skills" className="Navbar__link link">
               Skills
             </Link>
-            <Link to="/" className="Navbar__link link">
+            <Link to="/experience" className="Navbar__link link">
               Experience
             </Link>
           </div>

@@ -19,11 +19,9 @@ const Projects = () => {
     )
   );
   return (
-    <Fragment>
-      <Page title="Projects">
-        <div className="Projects">{projectDisplay}</div>
-      </Page>
-    </Fragment>
+    <Page title="Projects">
+      <div className="Projects">{projectDisplay}</div>
+    </Page>
   );
 };
 

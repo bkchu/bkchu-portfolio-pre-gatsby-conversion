@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class NavbarMobile extends Component {
   state = {
     open: false
   };
+
+  route = path => {
+    this.setState({ open: false }, () => this.props.history.push(path));
+  };
+
   menu = open => {
     return (
       <div
@@ -14,18 +19,30 @@ class NavbarMobile extends Component {
         ].join(' ')}
       >
         <div className="NavbarMobile__links">
-          <Link to="/" className="NavbarMobile__link link">
+          <p
+            onClick={() => this.route('/')}
+            className="NavbarMobile__link link"
+          >
             Home
-          </Link>
-          <Link to="/projects" className="NavbarMobile__link link">
+          </p>
+          <p
+            onClick={() => this.route('/projects')}
+            className="NavbarMobile__link link"
+          >
             Projects
-          </Link>
-          <Link to="/" className="NavbarMobile__link link">
+          </p>
+          <p
+            onClick={() => this.route('/skills')}
+            className="NavbarMobile__link link"
+          >
             Skills
-          </Link>
-          <Link to="/" className="NavbarMobile__link link">
+          </p>
+          <p
+            onClick={() => this.route('/experience')}
+            className="NavbarMobile__link link"
+          >
             Experience
-          </Link>
+          </p>
         </div>
       </div>
     );
@@ -57,4 +74,4 @@ class NavbarMobile extends Component {
   }
 }
 
-export default NavbarMobile;
+export default withRouter(NavbarMobile);
