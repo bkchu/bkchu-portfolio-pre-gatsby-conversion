@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class NavbarMobile extends Component {
   state = {
@@ -59,7 +59,7 @@ class NavbarMobile extends Component {
         )}
         <div
           onClick={() => this.setState(({ open }) => ({ open: !open }))}
-          className={this.state.open && 'is-active'}
+          className={this.state.open ? 'is-active' : ''}
           // className={'is-active'}
           id="burger"
         >

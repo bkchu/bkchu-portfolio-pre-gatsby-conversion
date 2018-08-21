@@ -1,9 +1,11 @@
 import React from 'react';
 
 const Techs = ({ techs }) => {
-  let techsDisplay = techs
-    .split(',')
-    .map(tech => <li className="Techs__tech">{tech}</li>);
+  let techsDisplay = techs.split(',').map(tech => (
+    <li key={tech} className="Techs__tech">
+      {tech}
+    </li>
+  ));
   return <ul className="Techs">{techsDisplay}</ul>;
 };
 

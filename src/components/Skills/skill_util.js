@@ -1,74 +1,87 @@
-
+import react_svg from '../../assets/icons/DevIcons-01.svg';
+import javascript_svg from '../../assets/icons/DevIcons-03.svg';
+import express_svg from '../../assets/icons/DevIcons-04.svg';
+import vuejs_svg from '../../assets/icons/DevIcons-05.svg';
+import git_svg from '../../assets/icons/DevIcons-06.svg';
+import socketio_svg from '../../assets/icons/DevIcons-07.svg';
+import postgresql_svg from '../../assets/icons/DevIcons-08.svg';
+import nodejs_svg from '../../assets/icons/DevIcons-09.svg';
+import npm_svg from '../../assets/icons/DevIcons-10.svg';
+import sass_svg from '../../assets/icons/DevIcons-11.svg';
+import firebase_svg from '../../assets/icons/DevIcons-12.svg';
+import css_svg from '../../assets/icons/DevIcons-13.svg';
+import redux_svg from '../../assets/icons/DevIcons-14.svg';
+import html_svg from '../../assets/icons/DevIcons-15.svg';
 
 export default [
   {
     skill: 'React',
-    img: ,
-    url: 'https://reactjs.org',
+    img: react_svg,
+    url: 'https://reactjs.org'
   },
   {
     skill: 'Redux',
-    img: ,
-    url: 'https://redux.js.org',
+    img: redux_svg,
+    url: 'https://redux.js.org'
   },
   {
     skill: 'ES6+',
-    img: ,
-    url: 'https://es6.io',
+    img: javascript_svg,
+    url: 'https://es6.io'
   },
   {
     skill: 'Express',
-    img: ,
-    url: 'https://expressjs.com',
+    img: express_svg,
+    url: 'https://expressjs.com'
   },
   {
     skill: 'Vue.js',
-    img: ,
-    url: 'https://vuejs.org',
+    img: vuejs_svg,
+    url: 'https://vuejs.org'
   },
   {
     skill: 'Git + GitHub',
-    img: ,
-    url: 'https://git-scm.com',
+    img: git_svg,
+    url: 'https://git-scm.com'
   },
   {
     skill: 'Socket.io',
-    img: ,
-    url: 'https://socket.io',
+    img: socketio_svg,
+    url: 'https://socket.io'
   },
   {
     skill: 'PostgreSQL',
-    img: ,
-    url: 'https://www.postgresql.org',
+    img: postgresql_svg,
+    url: 'https://www.postgresql.org'
   },
   {
     skill: 'Node.js',
-    img: ,
-    url: 'https://nodejs.org/en',
+    img: nodejs_svg,
+    url: 'https://nodejs.org/en'
   },
   {
     skill: 'NPM',
-    img: ,
-    url: 'https://www.npmjs.com,
+    img: npm_svg,
+    url: 'https://www.npmjs.com'
   },
   {
     skill: 'Sass',
-    img: ,
-    url: 'https://sass-lang.com',
+    img: sass_svg,
+    url: 'https://sass-lang.com'
   },
   {
     skill: 'Firebase',
-    img: ,
-    url: 'https://firebase.google.com',
+    img: firebase_svg,
+    url: 'https://firebase.google.com'
   },
   {
     skill: 'CSS3',
-    img: ,
-    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3',
+    img: css_svg,
+    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3'
   },
   {
     skill: 'HTML5',
-    img: ,
-    url: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5',
-  },
-]
+    img: html_svg,
+    url: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5'
+  }
+];

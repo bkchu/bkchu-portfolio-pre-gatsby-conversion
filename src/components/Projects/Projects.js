@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Page from '../Page/Page';
 import Techs from './Techs/Techs';
 
@@ -7,7 +7,7 @@ import projects from './project_util';
 const Projects = () => {
   const projectDisplay = projects.map(
     ({ title, description, year, technologies, url }) => (
-      <div className="Project">
+      <div key={title} className="Project">
         <h1 className="Project__title">{title}</h1>
         <p className="Project__year">{year}</p>
         <a className="Project__link link" target="_blank" href={url}>
