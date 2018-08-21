@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Content1 from '../Content1/Content1';
 import Projects from '../Projects/Projects';
 import Skills from '../Skills/Skills';
+import Experience from '../Experience/Experience';
 
 const Routes = () => {
   return (
@@ -11,6 +12,7 @@ const Routes = () => {
       <Route exact path="/" component={Content1} />
       <Route path="/projects" component={Projects} />
       <Route path="/skills" component={Skills} />
+      <Route path="/experience" component={Experience} />
     </Switch>
   );
 };
