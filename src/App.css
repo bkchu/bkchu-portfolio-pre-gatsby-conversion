@@ -179,13 +179,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 20px 0;
-  margin-bottom: 30px;
+  padding: 20px;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1; }
+  z-index: 1;
+  transition: all 400ms; }
   .Navbar__nav .Navbar__logo {
     width: 50px; }
   .Navbar__nav .Navbar__link-list {
@@ -201,6 +201,10 @@ body {
       font-size: 0.75em;
       font-weight: 800;
       letter-spacing: 3px; }
+
+.Navbar .Navbar__nav--scrolled {
+  background: #6a6adf;
+  box-shadow: 0px 15px 65px -12px #66629b; }
 
 .NavbarMobile__modal {
   position: fixed;
@@ -373,10 +377,12 @@ body {
     background: #efefff;
     border-radius: 4px;
     padding: 10px;
-    font-size: 0.85em;
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 0.85em;
     font-weight: 800;
     letter-spacing: 3px;
+    line-height: 1em;
+    text-transform: none;
     outline: none;
     cursor: pointer; }
 
@@ -529,7 +535,6 @@ body {
   grid-gap: 20px; }
   .Experiences .Experience {
     color: #525f7f;
-    border: 1px solid #efefff;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 15px 65px -12px #b3b0d6;

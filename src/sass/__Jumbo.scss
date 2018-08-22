@@ -61,10 +61,7 @@
     background: $background-color;
     border-radius: 4px;
     padding: 10px;
-    font-size: $content;
-    font-family: $header-font-stack;
-    font-weight: 800;
-    letter-spacing: 3px;
+    @include fonting($header-font-stack, $s: $content, $w: 800, $ls: 3px);
     outline: none;
     cursor: pointer;
   }
