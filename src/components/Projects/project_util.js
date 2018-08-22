@@ -12,7 +12,8 @@ export default [
     url: 'https://mebu.herokuapp.com',
     img: mebu_project,
     technologies:
-      'React,Redux,Node,Express,PostgreSQL,bCrypt,MomentJS,ChartJS,Nodemailer,Stripe,PropTypes'
+      'React,Redux,Node,Express,PostgreSQL,bCrypt,MomentJS,ChartJS,Nodemailer,Stripe,PropTypes',
+    color: '#2796D6'
   },
   {
     title: 'Jrnlr | Solo App',
@@ -22,7 +23,8 @@ export default [
     url: 'https://www.jrnlr.me',
     img: jrnlr_project,
     technologies:
-      'React,Redux,Node,Express,PostgreSQL,PassportJS,Unsplash API,Giphy API,MomentJS,Mobile-Responsive'
+      'React,Redux,Node,Express,PostgreSQL,PassportJS,Unsplash API,Giphy API,MomentJS,Mobile-Responsive',
+    color: '#FFFFFF'
   },
   {
     title: 'Anon-QQ | Pair-Programming App',
@@ -31,7 +33,8 @@ export default [
     year: '2018',
     url: 'https://anon-qq.herokuapp.com',
     img: anonqq_project,
-    technologies: 'React,Node,Express,Socket.io,Lodash,Mobile-Responsive'
+    technologies: 'React,Node,Express,Socket.io,Lodash,Mobile-Responsive',
+    color: '#072148'
   },
   {
     title: 'InstaTube | Solo App',
@@ -40,6 +43,7 @@ export default [
     year: '2017',
     url: 'https://instatube-react.herokuapp.com',
     img: instatube_project,
-    technologies: 'React,State + Props,YouTube API,Mobile-Responsive'
+    technologies: 'React,State + Props,YouTube API,Mobile-Responsive',
+    color: '#312F31'
   }
 ];

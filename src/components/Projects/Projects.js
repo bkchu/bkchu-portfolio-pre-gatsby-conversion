@@ -6,8 +6,11 @@ import projects from './project_util';
 
 const Projects = () => {
   const projectDisplay = projects.map(
-    ({ title, description, year, technologies, url }) => (
+    ({ title, description, year, technologies, url, img, color }) => (
       <div key={title} className="Project">
+        <div style={{ background: color }} className="Project__img-container">
+          <img className="Project__img" src={img} alt={title} />
+        </div>
         <h1 className="Project__title">{title}</h1>
         <p className="Project__year">{year}</p>
         <a className="Project__link link" target="_blank" href={url}>
