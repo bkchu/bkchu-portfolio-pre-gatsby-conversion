@@ -5,7 +5,6 @@
 
   .Project {
     color: $body-color;
-    border: 1px solid $background-color;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 15px 65px -12px #b3b0d6;
@@ -23,8 +22,9 @@
       align-items: center;
       justify-content: center;
       .Project__img {
-        width: 100%;
+        width: 80%;
         height: 80%;
+        object-fit: contain;
       }
     }
     &__title {

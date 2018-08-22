@@ -8,13 +8,15 @@ export default [
     description:
       'Contributed to full stack internal software such as a completely new web development resources site. (done in Nuxt.js) Taught as a mentor to 12 students a variety of fundamental and cutting-edge web development topics such as HTML, CSS, React, Redux, Node, Express, SQL.',
     img: devmtn_experience,
-    url: 'https://devmountain.com/web-bootcamp-immersive'
+    url: 'https://devmountain.com/web-bootcamp-immersive',
+    color: '#FFFFFF'
   },
   {
     experience: 'New Song Church | Media Team Coordinator',
     date: '2016 - Present',
     description:
       'Led the media through all aspects of media team for Sunday services including ProPresenter presentations, soundboard usage, stage light control, in addition to the creation of visually pleasing graphics for events and presentations.',
-    img: newsong_experience
+    img: newsong_experience,
+    color: '#858585'
   }
 ];
