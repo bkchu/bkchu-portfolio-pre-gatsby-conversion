@@ -1,5 +1,4 @@
 .Jumbo {
-  background: $highlight_color;
   clip-path: polygon(0 100%, 100% 65vh, 100% 0, 0 0);
   @include breakpoint(phablet) {
     clip-path: polygon(0 100%, 100% 60vh, 100% 0, 0 0);
@@ -28,7 +27,7 @@
 
     color: white;
     font-size: $content;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 
     .divider {
       width: 2px;
@@ -52,17 +51,44 @@
         @include breakpoint(phablet) {
           margin: 10px 0;
         }
+        @include breakpoint(laptop) {
+          &:after {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 1px;
+            margin-top: 5px;
+            background-color: $background-color;
+            transition: all 400ms;
+          }
+          &:hover:after {
+            width: 100%;
+          }
+        }
       }
     }
   }
-  &__cta {
-    border: 1px solid $background-color;
-    color: $highlight-color;
-    background: $background-color;
-    border-radius: 4px;
-    padding: 10px;
-    @include fonting($header-font-stack, $s: $content, $w: 800, $ls: 3px);
-    outline: none;
-    cursor: pointer;
+  &__networks {
+    display: flex;
+    .network {
+      padding: 7px;
+      border-radius: 50%;
+      color: $background_color;
+      margin-right: 5px;
+      display: block;
+      transition: all 400ms;
+      &:hover {
+        background: $background-color;
+        color: $highlight_color;
+      }
+      svg {
+        height: 25px;
+        width: 25px;
+        @include breakpoint(phablet) {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
   }
 }

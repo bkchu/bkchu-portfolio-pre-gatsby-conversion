@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 const Jumbo = () => {
   return (
@@ -17,12 +19,24 @@ const Jumbo = () => {
             <h5>brandon.k.chung@gmail.com</h5>
           </a>
         </div>
-        {/* <a
-            href="mailto:brandon.k.chung@gmail.com"
-            className="Navbar__cta link"
+        <div className="Jumbo__networks">
+          <a
+            href="https://github.com/bkchu"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="network link"
           >
-            HIRE ME
-          </a> */}
+            <FontAwesomeIcon icon={faGithub} size="lg" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/bkchuu"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="network link"
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
+          </a>
+        </div>
       </div>
     </div>
   );

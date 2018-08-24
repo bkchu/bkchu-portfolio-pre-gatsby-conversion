@@ -201,6 +201,16 @@ body {
       font-size: 0.75em;
       font-weight: 800;
       letter-spacing: 3px; }
+      .Navbar__nav .Navbar__link-list .Navbar__link:after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 3px;
+        margin-top: 5px;
+        background-color: #efefff;
+        transition: all 0.4s; }
+      .Navbar__nav .Navbar__link-list .Navbar__link:hover:after {
+        width: 100%; }
 
 .Navbar .Navbar__nav--scrolled {
   background: #6a6adf;
@@ -320,7 +330,6 @@ body {
           margin-top: 0; } }
 
 .Jumbo {
-  background: #6a6adf;
   clip-path: polygon(0 100%, 100% 65vh, 100% 0, 0 0);
   color: white;
   height: 75vh;
@@ -348,7 +357,7 @@ body {
     flex-direction: column;
     color: white;
     font-size: 0.85em;
-    margin-bottom: 20px; }
+    margin-bottom: 5px; }
     @media (min-width: 37.5em) {
       .Jumbo__contact {
         flex-direction: row; } }
@@ -371,20 +380,36 @@ body {
         @media (min-width: 37.5em) {
           .Jumbo__contact .Jumbo__info.link h5 {
             margin: 10px 0; } }
-  .Jumbo__cta {
-    border: 1px solid #efefff;
-    color: #6a6adf;
-    background: #efefff;
-    border-radius: 4px;
-    padding: 10px;
-    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 0.85em;
-    font-weight: 800;
-    letter-spacing: 3px;
-    line-height: 1em;
-    text-transform: none;
-    outline: none;
-    cursor: pointer; }
+        @media (min-width: 64em) {
+          .Jumbo__contact .Jumbo__info.link h5:after {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 1px;
+            margin-top: 5px;
+            background-color: #efefff;
+            transition: all 400ms; }
+          .Jumbo__contact .Jumbo__info.link h5:hover:after {
+            width: 100%; } }
+  .Jumbo__networks {
+    display: flex; }
+    .Jumbo__networks .network {
+      padding: 7px;
+      border-radius: 50%;
+      color: #efefff;
+      margin-right: 5px;
+      display: block;
+      transition: all 400ms; }
+      .Jumbo__networks .network:hover {
+        background: #efefff;
+        color: #6a6adf; }
+      .Jumbo__networks .network svg {
+        height: 25px;
+        width: 25px; }
+        @media (min-width: 37.5em) {
+          .Jumbo__networks .network svg {
+            height: 30px;
+            width: 30px; } }
 
 .Page {
   padding-top: 30px; }
