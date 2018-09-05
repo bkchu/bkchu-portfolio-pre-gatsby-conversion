@@ -4,6 +4,9 @@ import Jumbo from '../Jumbo/Jumbo';
 import svg1 from '../../assets/svg1.svg';
 
 class Content1 extends Component {
+  componentDidMount() {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }
   render() {
     return (
       <Fragment>
