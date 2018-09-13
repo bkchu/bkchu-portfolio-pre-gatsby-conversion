@@ -1,0 +1,20 @@
+.Modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+
+  &__popup {
+    z-index: 200;
+    width: 500px;
+    height: 500px;
+    background: white;
+    color: black;
+  }
+}

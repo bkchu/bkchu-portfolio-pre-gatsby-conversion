@@ -439,6 +439,24 @@ body {
     line-height: 1em;
     text-transform: uppercase; }
 
+.Modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); }
+  .Modal__popup {
+    z-index: 200;
+    width: 500px;
+    height: 500px;
+    background: white;
+    color: black; }
+
 .Projects {
   display: grid;
   grid: auto-flow/repeat(auto-fill, minmax(275px, 1fr));
