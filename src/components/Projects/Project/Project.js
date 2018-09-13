@@ -26,7 +26,9 @@ class Project extends Component {
         </a>
         <p className="Project__description">{description}</p>
         <Techs techs={technologies} />
-        <Modal>HELLO</Modal>
+        <Modal>
+          <div />
+        </Modal>
       </div>
     );
   }
