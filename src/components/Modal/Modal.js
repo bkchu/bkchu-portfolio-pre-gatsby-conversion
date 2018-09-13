@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Modal extends Component {
   state = {
-    open: true
+    open: this.props.open
   };
 
   onOpenHandler = () => {
