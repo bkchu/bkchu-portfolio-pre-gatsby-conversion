@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import Techs from '../Techs/Techs';
-import Modal from '../../Modal/Modal';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { projectModal } from "../../../redux/ducks/reducer";
+import Techs from "../Techs/Techs";
 
 class Project extends Component {
   render() {
@@ -19,19 +20,24 @@ class Project extends Component {
         <div style={{ background: color }} className="Project__img-container">
           <img className="Project__img" src={img} alt={title} />
         </div>
-        <h1 className="Project__title">{title}</h1>
+        <h1
+          onClick={() => this.props.projectModal(this.props.project)}
+          className="Project__title"
+        >
+          {title}
+        </h1>
         <p className="Project__year">{year}</p>
         <a className="Project__link link" target="_blank" href={url}>
           {url}
         </a>
         <p className="Project__description">{description}</p>
         <Techs techs={technologies} />
-        <Modal>
-          <div />
-        </Modal>
       </div>
     );
   }
 }
 
-export default Project;
+export default connect(
+  state => state,
+  { projectModal }
+)(Project);

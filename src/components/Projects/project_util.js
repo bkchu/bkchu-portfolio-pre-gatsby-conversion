@@ -13,6 +13,18 @@ export default [
     img: mebu_project,
     technologies:
       'React,Redux,Node,Express,PostgreSQL,bCrypt,MomentJS,ChartJS,Nodemailer,Stripe,PropTypes',
+    credentials: [
+      {
+        role: 'Owner',
+        email: 'aa@aa.com',
+        password: '2mLSqs'
+      },
+      {
+        role: 'Resident',
+        email: 'aa@aa.com',
+        password: 'tailopez'
+      }
+    ],
     color: '#2796D6'
   },
   {
@@ -24,6 +36,13 @@ export default [
     img: jrnlr_project,
     technologies:
       'React,Redux,Node,Express,PostgreSQL,PassportJS,Unsplash API,Giphy API,MomentJS,Mobile-Responsive',
+    credentials: [
+      {
+        role: 'Test User',
+        email: 'jrnlr-tester@mailinator.com',
+        password: 'abcABC123'
+      }
+    ],
     color: '#FFFFFF'
   },
   {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from '../Navbar/Navbar';
 import NavBarMobile from '../Navbar/NavbarMobile';
+import ModalConductor from '../Modal/ModalConductor';
 import Routes from '../Routes/Routes';
 
 class Main extends Component {
@@ -10,6 +11,7 @@ class Main extends Component {
         <Navbar />
         <NavBarMobile />
         <Routes />
+        <ModalConductor />
       </div>
     );
   }

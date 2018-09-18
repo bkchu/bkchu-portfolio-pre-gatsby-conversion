@@ -8,13 +8,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
 
-  &__popup {
-    z-index: 200;
-    width: 500px;
-    height: 500px;
-    background: white;
-    color: black;
+  &__content {
+    border-radius: 20px;
+
+    .Modal__header {
+      border-radius: 20px;
+      height: 50px;
+      background: $background-color;
+      width: 100%;
+    }
+
+    max-width: 75%;
+    background: $background-color;
+    position: relative;
+    .Modal__button--hide {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 200;
+      background: none;
+      border: none;
+      color: $highlight-color;
+      @include fonting(
+        $header-font-stack,
+        $s: 0.9em,
+        $w: 800,
+        $tt: uppercase,
+        $ls: 1px
+      );
+      cursor: pointer;
+    }
   }
 }
