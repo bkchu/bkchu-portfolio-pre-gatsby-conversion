@@ -39,12 +39,7 @@ const ProjectModal = props => {
         >
           <img className="ProjectModal__img" src={img} alt={title} />
         </div>
-        <h1
-          onClick={() => this.props.projectModal(this.props.project)}
-          className="ProjectModal__title"
-        >
-          {title}
-        </h1>
+        <h1 className="ProjectModal__title">{title}</h1>
         <p className="ProjectModal__year">{year}</p>
         <a className="ProjectModal__link link" target="_blank" href={url}>
           {url}
