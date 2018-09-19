@@ -462,6 +462,9 @@ body {
       height: 50px;
       background: #efefff;
       width: 100%; }
+    @media (min-width: 50em) {
+      .Modal__content {
+        max-width: 50%; } }
     .Modal__content .Modal__button--hide {
       position: absolute;
       top: 15px;

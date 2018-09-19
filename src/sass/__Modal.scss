@@ -22,6 +22,9 @@
     }
 
     max-width: 75%;
+    @include breakpoint(tablet) {
+      max-width: 50%;
+    }
     background: $background-color;
     position: relative;
     .Modal__button--hide {
