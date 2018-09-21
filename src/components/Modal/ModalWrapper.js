@@ -1,40 +1,53 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const ModalWrapper = props => {
-  const handleBackgroundClick = e => {
-    if (e.target === e.currentTarget) props.hideModal();
-  };
+class ModalWrapper extends Component {
+  componentDidMount() {
+    document.body.style.overflow = 'hidden';
+  }
 
-  const onOk = () => {
-    props.onOk();
-    props.hideModal();
-  };
+  componentWillUnmount() {
+    document.body.style.overflow = 'auto';
+  }
 
-  const okButton = props.showOk ? (
-    <button
-      className="Modal__button--ok"
-      onClick={onOk}
-      disabled={props.okDisabled}
-    >
-      {props.okText}
-    </button>
-  ) : null;
+  render() {
+    const handleBackgroundClick = e => {
+      if (e.target === e.currentTarget) this.props.hideModal();
+    };
 
-  return (
-    <div className="Modal" onClick={handleBackgroundClick}>
-      <div className="Modal__content">
-        <header className="Modal__header">
-          <button className="Modal__button--hide" onClick={props.hideModal}>
-            CLOSE
-          </button>
-        </header>
-        <div>{props.children}</div>
+    const onOk = () => {
+      this.props.onOk();
+      this.props.hideModal();
+    };
 
-        {okButton}
+    const okButton = this.props.showOk ? (
+      <button
+        className="Modal__button--ok"
+        onClick={onOk}
+        disabled={this.props.okDisabled}
+      >
+        {this.props.okText}
+      </button>
+    ) : null;
+
+    return (
+      <div className="Modal" onClick={handleBackgroundClick}>
+        <div className="Modal__content">
+          <header className="Modal__header">
+            <button
+              className="Modal__button--hide"
+              onClick={this.props.hideModal}
+            >
+              CLOSE
+            </button>
+          </header>
+          <div>{this.props.children}</div>
+
+          {okButton}
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 ModalWrapper.defaultProps = {
   title: '',

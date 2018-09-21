@@ -11,7 +11,7 @@ export function projectModal(projectInfo) {
     payload: { modalType: 'PROJECT_MODAL', modalMeta: projectInfo }
   };
 }
-export function derp2() {}
+
 export function hideModal() {
   return {
     type: HIDE_MODAL,
