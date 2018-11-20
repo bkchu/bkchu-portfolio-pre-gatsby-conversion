@@ -26,9 +26,9 @@
       width: 100%;
     }
 
-    max-width: 75%;
+    width: 85%;
     @include breakpoint(tablet) {
-      max-width: 50%;
+      width: 50%;
     }
     background: $background-color;
     position: relative;

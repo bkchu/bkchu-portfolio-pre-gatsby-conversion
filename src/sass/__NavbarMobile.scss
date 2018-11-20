@@ -30,6 +30,7 @@
       align-items: flex-end;
 
       .NavbarMobile__link {
+        cursor: pointer;
         padding: 20px 0;
         color: $highlight-color;
         @include fonting(
