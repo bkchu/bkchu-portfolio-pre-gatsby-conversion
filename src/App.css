@@ -139,7 +139,7 @@ body {
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
 
 body {
-  background-color: #efefff; }
+  background-color: #282525; }
 
 @media screen and (min-width: 320px) {
   html {
@@ -175,47 +175,57 @@ body {
   .container {
     max-width: 1140px; } }
 
+.Navbar__logo-link {
+  border-radius: 50%;
+  background: #282525;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.Navbar__logo {
+  width: 20px;
+  transition: all 300ms; }
+
 .Navbar__nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 30px;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
-  transition: all 400ms; }
-  .Navbar__nav .Navbar__logo {
-    width: 50px; }
-  .Navbar__nav .Navbar__link-list {
-    display: none; }
-    @media (min-width: 50em) {
-      .Navbar__nav .Navbar__link-list {
-        display: flex; } }
-    .Navbar__nav .Navbar__link-list .Navbar__link {
-      cursor: pointer;
-      margin-left: 20px;
-      color: white;
-      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      text-transform: uppercase;
-      font-size: 0.75em;
-      font-weight: 800;
-      letter-spacing: 3px; }
-      .Navbar__nav .Navbar__link-list .Navbar__link:after {
-        content: '';
-        display: block;
-        width: 20px;
-        height: 3px;
-        margin-top: 5px;
-        background-color: #efefff;
-        transition: all 0.4s; }
-      .Navbar__nav .Navbar__link-list .Navbar__link:hover:after {
-        width: 100%; }
+  transition: all 300ms; }
+  .Navbar__nav--scrolled {
+    background: #282525;
+    padding: 15px 20px;
+    box-shadow: 0px 15px 65px -12px #282525; }
+    .Navbar__nav--scrolled .Navbar__logo {
+      width: 30px; }
+    .Navbar__nav--scrolled .Navbar__list-link {
+      color: white; }
+      .Navbar__nav--scrolled .Navbar__list-link:after {
+        background-color: white; }
 
-.Navbar .Navbar__nav--scrolled {
-  background: #6a6adf;
-  box-shadow: 0px 15px 65px -12px #66629b; }
+.Navbar__link-list {
+  display: none; }
+  @media (min-width: 50em) {
+    .Navbar__link-list {
+      display: flex; } }
+
+.Navbar__list-link {
+  cursor: pointer;
+  margin-left: 20px;
+  color: #282525;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.75em;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: normal;
+  text-transform: uppercase; }
 
 .NavbarMobile__modal {
   position: fixed;
@@ -281,7 +291,7 @@ body {
 .NavbarMobile span {
   display: block;
   height: 5px;
-  background-color: #efefff;
+  background-color: #282525;
   border-radius: 100px;
   transition: all 0.6s cubic-bezier(0.54, 0.1, 0.42, 1.48), width 0.6s ease-out; }
   .NavbarMobile span:not(:last-child) {
@@ -332,21 +342,13 @@ body {
           margin-top: 0; } }
 
 .Jumbo {
-  clip-path: polygon(0 100%, 100% 65vh, 100% 0, 0 0);
-  color: white;
+  color: #282525;
   height: 75vh;
   width: 100%;
   display: flex;
   align-items: center;
-  background: #4e54c8;
-  /* fallback for old browsers */
-  background: linear-gradient(to left, #8f94fb, #4e54c8); }
-  @media (min-width: 37.5em) {
-    .Jumbo {
-      clip-path: polygon(0 100%, 100% 60vh, 100% 0, 0 0); } }
-  @media (min-width: 50em) {
-    .Jumbo {
-      clip-path: polygon(0 100%, 100% 55vh, 100% 0, 0 0); } }
+  background: white;
+  /* fallback for old browsers */ }
   .Jumbo__name {
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 3em;
@@ -357,7 +359,7 @@ body {
   .Jumbo__contact {
     display: flex;
     flex-direction: column;
-    color: white;
+    color: #282525;
     font-size: 0.85em;
     margin-bottom: 5px; }
     @media (min-width: 37.5em) {
@@ -373,7 +375,7 @@ body {
           display: block;
           margin: 10px 15px; } }
     .Jumbo__contact .Jumbo__info.link {
-      color: white;
+      color: #282525;
       text-decoration: none; }
       .Jumbo__contact .Jumbo__info.link h5 {
         font-weight: 300;
@@ -389,7 +391,7 @@ body {
             width: 20px;
             height: 1px;
             margin-top: 5px;
-            background-color: #efefff;
+            background-color: #282525;
             transition: all 400ms; }
           .Jumbo__contact .Jumbo__info.link h5:hover:after {
             width: 100%; } }
@@ -398,13 +400,13 @@ body {
     .Jumbo__networks .network {
       padding: 7px;
       border-radius: 50%;
-      color: #efefff;
+      color: #282525;
       margin-right: 5px;
       display: block;
-      transition: all 400ms; }
+      transition: all 300ms; }
       .Jumbo__networks .network:hover {
-        background: #efefff;
-        color: #6a6adf; }
+        background: #282525;
+        color: white; }
       .Jumbo__networks .network svg {
         height: 25px;
         width: 25px; }
@@ -462,12 +464,12 @@ body {
     outline: 0;
     border: 1px solid #dfdfdf;
     width: 85%;
-    background: #efefff;
+    background: #282525;
     position: relative; }
     .Modal__content .Modal__header {
       border-radius: 20px;
       height: 50px;
-      background: #efefff;
+      background: #282525;
       width: 100%; }
     @media (min-width: 50em) {
       .Modal__content {
@@ -495,7 +497,7 @@ body {
 
 .Project {
   color: #525f7f;
-  background: #efefff;
+  background: #282525;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0px 15px 65px -12px #b3b0d6;
@@ -552,7 +554,7 @@ body {
 
 .ProjectModal {
   color: #525f7f;
-  background: #efefff;
+  background: #282525;
   padding: 20px;
   position: relative;
   border-radius: 20px; }
