@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Header from './Header/Header';
+import Footer from '../Footer/Footer';
 
 class Page extends Component {
   componentDidMount() {
@@ -9,9 +9,10 @@ class Page extends Component {
     const { title, children } = this.props;
     return (
       <Fragment>
-        <Header title={title} />
+        {/* <Header title={title} /> */}
         <div className="Page">
           <div className="container">{children}</div>
+          <Footer />
         </div>
       </Fragment>
     );

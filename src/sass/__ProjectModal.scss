@@ -1,9 +1,10 @@
 .ProjectModal {
   color: $body-color;
-  background: $background-color;
+  background: $white;
   padding: 20px;
   position: relative;
   border-radius: 20px;
+
   &__img-container {
     position: absolute;
     top: 0;
@@ -14,41 +15,55 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    .ProjectModal__img {
-      width: 80%;
-      height: 80%;
-      object-fit: contain;
-    }
   }
+
+  &__img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+
   &__title {
-    margin-top: 125px;
-    color: $highlight-color;
-    @include fonting($s: $subheader, $lh: 1.2em);
+    margin-top: 15rem;
+    margin-bottom: 1.5rem;
+    color: $black;
+    @include fonting($header-font-stack, $s: 3rem);
   }
+
   &__year {
-    @include fonting($header-font-stack, $s: $content, $lh: 2em);
+    @include fonting($header-font-stack, $s: 2rem);
+    margin: 1.5rem 0;
   }
+
   &__link.link {
-    color: $highlight-color;
-    @include fonting($header-font-stack, $s: 0.8em, $ls: 1px, $w: 300);
+    color: $black;
+    @include fonting($header-font-stack, $s: 2rem, $ls: 1px, $w: 300);
   }
+
   &__description {
-    @include fonting($s: $content, $w: 300, $lh: 1.2em);
-    margin-bottom: 20px;
+    @include fonting($header-font-stack, $s: 2rem, $w: 300, $lh: 2.5rem);
+    padding-left: 1.5rem;
+    border-left: 0.25rem solid $gray-1;
+    color: $black;
+    margin: 2rem 0;
   }
   .Credential {
-    margin: 20px 0;
+    margin: 1.5rem 0;
+
     &__header {
-      @include fonting($header-font-stack, $w: 800, $s: $content, $lh: 2em);
+      @include fonting($header-font-stack, $w: 800, $s: 2rem, $lh: 3rem);
     }
+
     &__role {
-      @include fonting($header-font-stack, $w: 800, $s: 0.75em, $lh: 2em);
+      @include fonting($header-font-stack, $w: 800, $s: 2rem, $lh: 3rem);
     }
+
     &__email {
-      @include fonting($header-font-stack, $s: 0.75em, $lh: 1.3em);
+      @include fonting($header-font-stack, $s: 1.5rem, $lh: 2.25rem);
     }
+
     &__password {
-      @include fonting($header-font-stack, $s: 0.75em, $lh: 1.3em);
+      @include fonting($header-font-stack, $s: 1.5rem, $lh: 2.25rem);
     }
   }
 }

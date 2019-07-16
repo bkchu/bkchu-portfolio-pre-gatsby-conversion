@@ -1,20 +1,11 @@
 .Header {
   background: $highlight_color;
-  clip-path: polygon(0 100%, 100% 150px, 100% 0, 0 0);
-  @include breakpoint(phablet) {
-    clip-path: polygon(0 100%, 100% 125px, 100% 0, 0 0);
-  }
-  @include breakpoint(tablet) {
-    clip-path: polygon(0 100%, 100% 100px, 100% 0, 0 0);
-  }
   // z-index: 100;
   color: white;
-  height: 200px;
+  height: 110px;
   width: 100%;
   display: flex;
   align-items: center;
-  background: #4e54c8; /* fallback for old browsers */
-  background: linear-gradient(to left, #8f94fb, #4e54c8);
 
   .title {
     @include fonting($header-font-stack, $s: 2em, $w: 800, $tt: uppercase);

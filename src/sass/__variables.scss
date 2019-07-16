@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto+Slab:300,400');
 
 $black: rgb(40, 37, 37);
+$gray-1: rgb(207, 203, 203);
+$gray-9: rgb(65, 64, 64);
 $white: white;
 $highlight-color: #6a6adf;
 $dark-color: #dadaf5;
@@ -17,3 +19,5 @@ $subheader-font-stack: 'Roboto Slab', -apple-system, BlinkMacSystemFont,
   'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
   sans-serif;
 $background-color: $black;
+$black-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
+  0 2px 4px 0 rgba(14, 30, 37, 0.12);

@@ -13,7 +13,6 @@ const Skills = () => {
 
   return (
     <Page title="Skills">
-      <h1 className="Skills__header">Tech + Tools</h1>
       <div className="Skills">{skillsDisplay}</div>
     </Page>
   );

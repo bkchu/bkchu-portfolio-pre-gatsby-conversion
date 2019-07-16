@@ -40,7 +40,7 @@ export default [
     url: 'https://vuejs.org'
   },
   {
-    skill: 'Git + GitHub',
+    skill: 'Git (Hub)',
     img: git_svg,
     url: 'https://git-scm.com'
   },

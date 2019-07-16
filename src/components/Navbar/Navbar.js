@@ -1,35 +1,39 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { contactModal } from '../../redux/ducks/reducer';
-
+import { Link, withRouter } from 'react-router-dom';
 import Logo from '../../assets/BKC_Logo.svg';
+import { contactModal, setScrolled } from '../../redux/ducks/reducer';
+import classnames from 'classnames';
 
 class Navbar extends Component {
-  state = {
-    height: 0
-  };
+  constructor(props) {
+    super(props);
+    this.props.setScrolled(false);
+  }
+
   componentDidMount() {
     document.addEventListener('scroll', this.trackScrolling);
   }
 
   trackScrolling = () => {
-    this.setState({ height: window.scrollY });
+    const height = window.scrollY;
+    if (this.props.location.pathname === '/' && height >= 50) {
+      this.props.setScrolled(true);
+    } else if (this.props.location.pathname !== '/' && height >= 75) {
+      this.props.setScrolled(true);
+    } else {
+      this.props.setScrolled(false);
+    }
   };
 
   render() {
-    let navbarClasses = ['Navbar__nav'];
-    if (this.props.location.pathname === '/' && this.state.height >= 300) {
-      navbarClasses.push('Navbar__nav--scrolled');
-    } else if (
-      this.props.location.pathname !== '/' &&
-      this.state.height >= 75
-    ) {
-      navbarClasses.push('Navbar__nav--scrolled');
-    }
+    let navbarClasses = classnames('Navbar__nav', {
+      'Navbar__nav--scrolled': this.props.isScrolled
+    });
+
     return (
       <div className="Navbar">
-        <nav className={navbarClasses.join(' ')}>
+        <nav className={navbarClasses}>
           <Link to="/" className="Navbar__logo-link link">
             <img className="Navbar__logo" src={Logo} alt="brand" />
           </Link>
@@ -59,7 +63,11 @@ class Navbar extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  isScrolled: state.isScrolled.isScrolled
+});
+
 export default connect(
-  null,
-  { contactModal }
+  mapStateToProps,
+  { contactModal, setScrolled }
 )(withRouter(Navbar));

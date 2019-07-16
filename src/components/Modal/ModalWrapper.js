@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 class ModalWrapper extends Component {
   componentDidMount() {
@@ -37,7 +39,7 @@ class ModalWrapper extends Component {
               className="Modal__button--hide"
               onClick={this.props.hideModal}
             >
-              CLOSE
+              <FontAwesomeIcon icon={faTimes} size="md" />
             </button>
           </header>
           <div>{this.props.children}</div>

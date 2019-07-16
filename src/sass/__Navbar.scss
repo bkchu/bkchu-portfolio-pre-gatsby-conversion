@@ -1,16 +1,23 @@
 .Navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
   &__logo-link {
     border-radius: 50%;
     background: $background-color;
-    width: 50px;
-    height: 50px;
+    width: 6rem;
+    height: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   &__logo {
-    width: 20px;
+    width: 2.5rem;
     transition: all 300ms;
   }
 
@@ -18,26 +25,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    padding: 3rem;
     transition: all 300ms;
 
     &--scrolled {
-      background: $background-color;
-      padding: 15px 20px;
-      box-shadow: 0px 15px 65px -12px $black;
+      background: $white;
+      box-shadow: $black-box-shadow;
+      padding: 1.5rem 3rem;
 
       .Navbar {
-        &__logo {
-          width: 30px;
-        }
-
         &__list-link {
-          color: white;
+          color: $black;
 
           &:after {
             background-color: white;
@@ -61,8 +59,8 @@
     color: $black;
     @include fonting(
       $header-font-stack,
-      $s: 0.75em,
-      $ls: 2px,
+      $s: 2rem,
+      $ls: 0.25rem,
       $lh: normal,
       $tt: uppercase
     );

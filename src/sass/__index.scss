@@ -138,21 +138,19 @@ html,
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
   font-family: $subheader-font-stack;
+  font-size: 8px !important;
 }
 
-body {
-  background-color: $background-color;
-}
-
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 40rem) {
   html {
-    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(2rem + 6 * ((100vw - 40rem) / 680));
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 124rem) {
   html {
-    font-size: 22px;
+    font-size: 2.75rem;
   }
 }
 
@@ -162,10 +160,10 @@ body {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 2rem;
+  padding-left: 2rem;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 576px) {
@@ -187,4 +185,8 @@ body {
   .container {
     max-width: 1140px;
   }
+}
+
+.Main {
+  width: 100%;
 }
