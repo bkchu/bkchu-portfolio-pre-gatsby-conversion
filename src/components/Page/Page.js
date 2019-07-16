@@ -6,10 +6,9 @@ class Page extends Component {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   }
   render() {
-    const { title, children } = this.props;
+    const { children } = this.props;
     return (
       <Fragment>
-        {/* <Header title={title} /> */}
         <div className="Page">
           <div className="container">{children}</div>
           <Footer />

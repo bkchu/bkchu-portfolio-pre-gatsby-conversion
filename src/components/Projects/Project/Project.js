@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { projectModal } from '../../../redux/ducks/reducer';
 import Techs from '../Techs/Techs';
