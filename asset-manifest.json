@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.fc213330.css",
-  "main.css.map": "static/css/main.fc213330.css.map",
-  "main.js": "static/js/main.129a985b.js",
-  "main.js.map": "static/js/main.129a985b.js.map",
+  "main.css": "static/css/main.f670ee29.css",
+  "main.css.map": "static/css/main.f670ee29.css.map",
+  "main.js": "static/js/main.21263fc5.js",
+  "main.js.map": "static/js/main.21263fc5.js.map",
   "static/media/BKC_Logo.svg": "static/media/BKC_Logo.ed3b4442.svg",
   "static/media/DevIcons-01.svg": "static/media/DevIcons-01.0c3a2bb9.svg",
   "static/media/DevIcons-03.svg": "static/media/DevIcons-03.7b72a91f.svg",
@@ -23,6 +23,5 @@
   "static/media/instatube.svg": "static/media/instatube.54bdb8d3.svg",
   "static/media/jrnlr.svg": "static/media/jrnlr.b0b5cc57.svg",
   "static/media/mebu.svg": "static/media/mebu.dbe3581c.svg",
-  "static/media/newsong.png": "static/media/newsong.dad5fb08.png",
-  "static/media/svg1.svg": "static/media/svg1.bf43b0c1.svg"
+  "static/media/newsong.png": "static/media/newsong.dad5fb08.png"
 }
