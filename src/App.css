@@ -372,7 +372,8 @@ body {
 .Page {
   position: relative;
   padding-top: 15rem;
-  padding-bottom: 25rem; }
+  padding-bottom: 25rem;
+  min-height: 100vh; }
   @media (min-width: 50em) {
     .Page {
       padding-bottom: 15rem; } }
