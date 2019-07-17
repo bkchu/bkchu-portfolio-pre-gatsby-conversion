@@ -377,6 +377,13 @@ body {
   @media (min-width: 50em) {
     .Page {
       padding-bottom: 15rem; } }
+  .Page__load-indicator {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    height: 5px;
+    background: #282525; }
 
 .Header {
   background: #6a6adf;

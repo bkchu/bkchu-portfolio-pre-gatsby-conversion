@@ -23,7 +23,7 @@ const NavItem = ({ to, children, onClick, className, animate, initial, ...props 
       opacity: 1,
       transition: {
         y: { stiffness: 1000, velocity: -100 },
-        delay: 1.43
+        delay: 0.93
       }
     },
     logoClosed: {
