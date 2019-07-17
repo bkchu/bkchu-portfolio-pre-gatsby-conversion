@@ -4,6 +4,8 @@ import { Link, withRouter } from 'react-router-dom';
 import Logo from '../../assets/BKC_Logo.svg';
 import { contactModal, setScrolled } from '../../redux/ducks/reducer';
 import classnames from 'classnames';
+import { motion } from 'framer-motion';
+import NavItem from './NavItem/NavItem';
 
 class Navbar extends Component {
   constructor(props) {
@@ -27,9 +29,46 @@ class Navbar extends Component {
   };
 
   render() {
-    let navbarClasses = classnames('Navbar__nav', {
+    const navbarClasses = classnames('Navbar__nav', {
       'Navbar__nav--scrolled': this.props.isScrolled
     });
+
+    const variants = {
+      open: {
+        transition: { staggerChildren: 0.07, delayChildren: 0.1 }
+      },
+      closed: {
+        transition: { staggerChildren: 0.05, staggerDirection: -1 }
+      }
+    };
+
+    const nav = [
+      {
+        to: '/',
+        name: 'Home',
+        onClick: null
+      },
+      {
+        to: '/projects',
+        name: 'Projects',
+        onClick: null
+      },
+      {
+        to: '/skills',
+        name: 'Skills',
+        onClick: null
+      },
+      {
+        to: '/experience',
+        name: 'Experience',
+        onClick: null
+      },
+      {
+        to: '#',
+        name: 'Contact',
+        onClick: () => this.props.contactModal()
+      }
+    ];
 
     return (
       <div className="Navbar">
@@ -37,26 +76,23 @@ class Navbar extends Component {
           <Link to="/" className="Navbar__logo-link link">
             <img className="Navbar__logo" src={Logo} alt="brand" />
           </Link>
-          <div className="Navbar__link-list">
-            <Link to="/" className="Navbar__list-link link">
-              Home
-            </Link>
-            <Link to="/projects" className="Navbar__list-link link">
-              Projects
-            </Link>
-            <Link to="/skills" className="Navbar__list-link link">
-              Skills
-            </Link>
-            <Link to="/experience" className="Navbar__list-link link">
-              Experience
-            </Link>
-            <a
-              onClick={() => this.props.contactModal()}
-              className="Navbar__list-link link"
-            >
-              Contact
-            </a>
-          </div>
+          <motion.div
+            initial="closed"
+            animate="open"
+            variants={variants}
+            className="Navbar__link-list"
+          >
+            {nav.map(({ to, name, ...props }, i) => (
+              <NavItem
+                key={i}
+                to={to}
+                className="Navbar__list-link link"
+                {...props}
+              >
+                {name}
+              </NavItem>
+            ))}
+          </motion.div>
         </nav>
       </div>
     );

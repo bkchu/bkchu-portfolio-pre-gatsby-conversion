@@ -18,7 +18,7 @@ const Jumbo = () => {
         <motion.h2
           initial="hidden"
           animate="visible"
-          transition={{ type: 'spring', damping: 20, stiffness: 300, delay: 0.5 }}
+          transition={{ type: 'spring', damping: 20, stiffness: 300, delay: 0.3 }}
           // initial={false}
           variants={variants}
           className="Jumbo__description"
