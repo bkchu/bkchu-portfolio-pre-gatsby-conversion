@@ -39,7 +39,7 @@ class ModalWrapper extends Component {
               className="Modal__button--hide"
               onClick={this.props.hideModal}
             >
-              <FontAwesomeIcon icon={faTimes} size="md" />
+              <FontAwesomeIcon icon={faTimes} size="1x" />
             </button>
           </header>
           <div>{this.props.children}</div>
