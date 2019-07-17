@@ -17,15 +17,15 @@ const NavbarMobile = props => {
   const menu = open => {
     const drawerVariants = {
       open: {
-        width: '100%',
+        left: 0,
         transition: {
-          width: { stiffness: 1000, velocity: -50 }
+          left: { stiffness: 1000, velocity: -50 }
         }
       },
       closed: {
-        width: '0%',
+        left: window.innerWidth,
         transition: {
-          width: { stiffness: 1000 }
+          left: { stiffness: 1000 }
         }
       }
     };
