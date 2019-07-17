@@ -1,86 +1,124 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { contactModal } from '../../redux/ducks/reducer';
 import classnames from 'classnames';
+import { motion } from 'framer-motion';
+import NavItem from './NavItem/NavItem';
 
-class NavbarMobile extends Component {
-  state = {
-    open: false
+const NavbarMobile = props => {
+  const [open, toggleOpen] = useState(false);
+
+  const route = path => {
+    toggleOpen(false);
+    props.history.push(path);
   };
 
-  route = path => {
-    this.setState({ open: false }, () => this.props.history.push(path));
-  };
+  const menu = open => {
+    const drawerVariants = {
+      open: {
+        width: '100%',
+        transition: {
+          width: { stiffness: 1000, velocity: -50 }
+        }
+      },
+      closed: {
+        width: '0%',
+        transition: {
+          width: { stiffness: 1000 }
+        }
+      }
+    };
 
-  menu = open => {
-    const classes = classnames('NavbarMobile__nav', {
-      'NavbarMobile__nav--open': open
-    });
+    const linkVariants = {
+      open: {
+        transition: { staggerChildren: 0.07, delayChildren: 0.3 }
+      },
+      closed: {
+        transition: { staggerChildren: 0.05, staggerDirection: -1 }
+      }
+    };
+
+    const nav = [
+      {
+        to: '/',
+        name: 'Home',
+        onClick: () => route('/')
+      },
+      {
+        to: '/projects',
+        name: 'Projects',
+        onClick: () => route('/projects')
+      },
+      {
+        to: '/skills',
+        name: 'Skills',
+        onClick: () => route('/skills')
+      },
+      {
+        to: '/experience',
+        name: 'Experience',
+        onClick: () => route('/experience')
+      },
+      {
+        to: '#',
+        name: 'Contact',
+        onClick: () => props.contactModal()
+      }
+    ];
+
     return (
-      <div className={classes}>
-        <div className="NavbarMobile__links">
-          <p
-            onClick={() => this.route('/')}
-            className="NavbarMobile__link link"
+      <motion.div
+        initial="closed"
+        animate={open ? 'open' : 'closed'}
+        variants={drawerVariants}
+        className="NavbarMobile__nav"
+      >
+        {open && (
+          <motion.div
+            initial="closed"
+            animate="open"
+            variants={linkVariants}
+            className="NavbarMobile__links"
           >
-            Home
-          </p>
-          <p
-            onClick={() => this.route('/projects')}
-            className="NavbarMobile__link link"
-          >
-            Projects
-          </p>
-          <p
-            onClick={() => this.route('/skills')}
-            className="NavbarMobile__link link"
-          >
-            Skills
-          </p>
-          <p
-            onClick={() => this.route('/experience')}
-            className="NavbarMobile__link link"
-          >
-            Experience
-          </p>
-          <p
-            onClick={() => this.props.contactModal()}
-            className="NavbarMobile__link link"
-          >
-            Contact
-          </p>
-        </div>
-      </div>
-    );
-  };
-
-  render() {
-    const burgerClasses = classnames('burger', {
-      'is-active': this.state.open,
-      'burger--scrolled': this.props.isScrolled
-    });
-    return (
-      <div className="NavbarMobile">
-        {this.state.open && (
-          <div
-            onClick={() => this.setState({ open: false })}
-            className="NavbarMobile__modal"
-          />
+            {nav.map(({ to, name, ...props }, i) => (
+              <NavItem
+                key={i}
+                to={to}
+                className="NavbarMobile__link link"
+                {...props}
+              >
+                {name}
+              </NavItem>
+            ))}
+          </motion.div>
         )}
-        <div
-          onClick={() => this.setState(({ open }) => ({ open: !open }))}
-          className={burgerClasses}
-        >
-          <span />
-          <span />
-          <span />
-        </div>
-        {this.menu(this.state.open)}
-      </div>
+      </motion.div>
     );
-  }
-}
+  };
+
+  const burgerClasses = classnames('burger', {
+    'is-active': open,
+    'burger--scrolled': props.isScrolled
+  });
+
+  return (
+    <div className="NavbarMobile">
+      {open && (
+        <div
+          onClick={() => toggleOpen(false)}
+          className="NavbarMobile__modal"
+        />
+      )}
+      <div onClick={() => toggleOpen(!open)} className={burgerClasses}>
+        <span />
+        <span />
+        <span />
+      </div>
+      {menu(open)}
+    </div>
+  );
+};
 
 const mapStateToProps = state => {
   return {

@@ -2,7 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { withRouter } from 'react-router-dom';
 
-const NavItem = ({ to, children, onClick, className, animate, initial, ...props }) => {
+const NavItem = ({
+  to,
+  children,
+  onClick,
+  className,
+  animate,
+  initial,
+  ...props
+}) => {
   const variants = {
     open: {
       y: 0,
