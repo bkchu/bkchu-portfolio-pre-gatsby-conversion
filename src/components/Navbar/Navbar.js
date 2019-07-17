@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
-import Logo from '../../assets/BKC_Logo.svg';
-import { contactModal, setScrolled } from '../../redux/ducks/reducer';
 import classnames from 'classnames';
 import { motion } from 'framer-motion';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import Logo from '../../assets/BKC_Logo.svg';
+import { contactModal, setScrolled } from '../../redux/ducks/reducer';
 import NavItem from './NavItem/NavItem';
 
 class Navbar extends Component {
@@ -35,7 +35,7 @@ class Navbar extends Component {
 
     const variants = {
       open: {
-        transition: { staggerChildren: 0.07, delayChildren: 0.1 }
+        transition: { staggerChildren: 0.07, delayChildren: 1.5 }
       },
       closed: {
         transition: { staggerChildren: 0.05, staggerDirection: -1 }
@@ -73,9 +73,14 @@ class Navbar extends Component {
     return (
       <div className="Navbar">
         <nav className={navbarClasses}>
-          <Link to="/" className="Navbar__logo-link link">
+          <NavItem
+            animate="logoOpen"
+            initial="logoClosed"
+            to="/"
+            className="Navbar__logo-link link"
+          >
             <img className="Navbar__logo" src={Logo} alt="brand" />
-          </Link>
+          </NavItem>
           <motion.div
             initial="closed"
             animate="open"

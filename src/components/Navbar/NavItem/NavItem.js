@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { withRouter } from 'react-router-dom';
 
-const NavItem = ({ to, children, onClick, ...props }) => {
+const NavItem = ({ to, children, onClick, className, ...props }) => {
   const variants = {
     open: {
       y: 0,
@@ -17,14 +17,30 @@ const NavItem = ({ to, children, onClick, ...props }) => {
       transition: {
         y: { stiffness: 1000 }
       }
+    },
+    logoOpen: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        y: { stiffness: 1000, velocity: -100 },
+        delay: 1.43
+      }
+    },
+    logoClosed: {
+      y: 20,
+      opacity: 0,
+      transition: {
+        y: { stiffness: 1000 }
+      }
     }
   };
   return (
     <motion.a
       variants={variants}
       whileHover={{ scale: 1.05 }}
-      className="Navbar__list-link link"
+      className={className}
       onClick={!!onClick ? onClick : () => props.history.push(to)}
+      {...props}
     >
       {children}
     </motion.a>
