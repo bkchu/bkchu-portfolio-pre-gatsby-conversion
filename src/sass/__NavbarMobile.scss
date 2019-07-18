@@ -1,4 +1,8 @@
 .NavbarMobile {
+  @include breakpoint(tablet) {
+    display: none;
+  }
+
   &__modal {
     position: fixed;
     top: 0;
@@ -47,10 +51,6 @@
     z-index: 300;
     cursor: pointer;
     transition: all 300ms;
-
-    @include breakpoint(tablet) {
-      display: none;
-    }
 
     &.is-active {
       span {

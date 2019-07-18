@@ -1,8 +1,8 @@
 .Jumbo {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  // width: 100%;
   display: flex;
   align-items: center;
   background: $white; /* fallback for old browsers */
@@ -11,24 +11,28 @@
   &__name {
     @include fonting($header-font-stack, $s: 5rem, $w: 700);
 
-    @include breakpoint(phablet) {
-      @include fonting($header-font-stack, $s: 7.5rem, $w: 700);
-    }
+    // @include breakpoint(phablet) {
+    //   @include fonting($header-font-stack, $s: 7.5rem, $w: 700);
+    // }
 
     @include breakpoint(tablet) {
-      @include fonting($header-font-stack, $s: 10rem, $w: 700);
+      @include fonting($header-font-stack, $s: 7rem, $w: 700);
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
   &__description {
     @include fonting($header-font-stack, $s: 4rem, $w: 400, $lh: 1.2em);
 
-    @include breakpoint(phablet) {
-      @include fonting($header-font-stack, $s: 6rem, $w: 400, $lh: 1.2em);
-    }
+    // @include breakpoint(phablet) {
+    //   @include fonting($header-font-stack, $s: 6rem, $w: 400, $lh: 1.2em);
+    // }
 
     @include breakpoint(tablet) {
-      @include fonting($header-font-stack, $s: 7.5rem, $w: 400, $lh: 1.2em);
+      @include fonting($header-font-stack, $s: 5rem, $w: 400, $lh: 1.2em);
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }
