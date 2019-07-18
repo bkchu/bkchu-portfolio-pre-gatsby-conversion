@@ -1,6 +1,7 @@
 .Contact {
   $self: &;
   padding: 20px;
+  background: $white;
 
   &__form {
     width: 100%;
@@ -19,7 +20,7 @@
 
   &__label {
     @include fonting($header-font-stack, $s: 2rem, $w: 300, $lh: 3rem);
-
+    color: $black;
     margin-bottom: 1rem;
   }
 
@@ -30,9 +31,10 @@
     border: solid 1px $black;
     border-radius: 3px;
     padding: 2rem;
-    color: $white;
+    background: $white;
+    color: $black;
 
-    @include fonting($header-font-stack, $s: 1.5rem, $w: 300, $lh: 2.25rem);
+    @include fonting($header-font-stack, $s: 2rem, $w: 300, $lh: 2.25rem);
 
     &:hover {
       border-color: $black;
