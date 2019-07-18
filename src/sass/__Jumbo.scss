@@ -1,38 +1,32 @@
 .Jumbo {
   position: fixed;
-  bottom: 1rem;
+  margin-top: 35vh;
   left: 1rem;
-  // width: 100%;
   display: flex;
   align-items: center;
   background: $white; /* fallback for old browsers */
   color: $black;
 
+  @include breakpoint(tablet) {
+  }
+
   &__name {
     @include fonting($header-font-stack, $s: 5rem, $w: 700);
 
-    // @include breakpoint(phablet) {
-    //   @include fonting($header-font-stack, $s: 7.5rem, $w: 700);
-    // }
-
     @include breakpoint(tablet) {
       @include fonting($header-font-stack, $s: 7rem, $w: 700);
-      top: 50%;
-      transform: translateY(-50%);
     }
   }
 
   &__description {
     @include fonting($header-font-stack, $s: 4rem, $w: 400, $lh: 1.2em);
 
-    // @include breakpoint(phablet) {
-    //   @include fonting($header-font-stack, $s: 6rem, $w: 400, $lh: 1.2em);
-    // }
+    max-width: 80%;
 
     @include breakpoint(tablet) {
       @include fonting($header-font-stack, $s: 5rem, $w: 400, $lh: 1.2em);
-      top: 50%;
-      transform: translateY(-50%);
+
+      max-width: 100%;
     }
   }
 }
