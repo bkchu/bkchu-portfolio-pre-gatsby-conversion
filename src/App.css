@@ -305,7 +305,7 @@ body {
     width: 2rem; }
 
 .Jumbo {
-  margin-top: 50vh;
+  margin-top: 20vh;
   left: 1rem;
   display: flex;
   align-items: center;
@@ -328,8 +328,6 @@ body {
         letter-spacing: 0px;
         line-height: 11rem;
         text-transform: none; } }
-  .Jumbo__description {
-    font-weight: 400; }
 
 .Page {
   position: relative;
