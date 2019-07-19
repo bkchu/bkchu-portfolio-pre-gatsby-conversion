@@ -1,15 +1,10 @@
 .Jumbo {
-  // position: fixed;
   margin-top: 20vh;
-  // margin-left: 3rem;
   left: 1rem;
   display: flex;
   align-items: center;
   background: $white; /* fallback for old browsers */
   color: $black;
-
-  @include breakpoint(tablet) {
-  }
 
   &__name,
   &__description {
@@ -21,15 +16,4 @@
 
     max-width: 85%;
   }
-
-  
-
-  //  {
-  //   @include fonting($header-font-stack, $s: 4rem, $w: 400, $lh: 1.2em);
-
-  //   @include breakpoint(tablet) {
-  //     @include fonting($header-font-stack, $s: 5rem, $w: 400, $lh: 1.2em);
-
-  //   }
-  // }
 }
