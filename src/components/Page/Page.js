@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Footer from '../Footer/Footer';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 class Page extends Component {
   componentDidMount() {
@@ -36,7 +36,9 @@ class Page extends Component {
     };
 
     const loadingBarStates = {
-      right: [100, 70, 0, 0, 0].map(val => `${val * .01 * window.innerWidth}px`),
+      right: [100, 70, 0, 0, 0].map(
+        val => `${val * 0.01 * window.innerWidth}px`
+      ),
       opacity: [0, 1, 1, 1, 0]
     };
 
@@ -46,23 +48,20 @@ class Page extends Component {
           animate={loadingBarStates}
           transition={{
             duration: 1.05,
-            times: [0, 0.4, 0.5, 0.8, 1],
+            times: [0, 0.4, 0.5, 0.8, 1]
           }}
           className="Page__load-indicator"
         />
         <div className="Page">
-          <AnimatePresence>
-            <motion.div
-              key={children}
-              initial="hidden"
-              animate="visible"
-              exit="exiting"
-              variants={pageVariants}
-              className="container"
-            >
-              {children}
-            </motion.div>
-          </AnimatePresence>
+          <motion.div
+            key={children}
+            initial="hidden"
+            animate="visible"
+            variants={pageVariants}
+            className="container"
+          >
+            {children}
+          </motion.div>
           <Footer />
         </div>
       </Fragment>

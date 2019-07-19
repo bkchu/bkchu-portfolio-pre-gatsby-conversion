@@ -1,35 +1,39 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Page from '../Page/Page';
 
 const Jumbo = () => {
   const variants = {
-    hidden: {
-      x: -100,
+    hiddenJumbo: {
+      x: -20,
       opacity: 0
     },
-    visible: {
+    visibleJumbo: {
       x: 0,
-      opacity: 1
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        // damping: 200,
+        stiffness: 20,
+        // velocity: 0.01,
+        delay: 1
+      }
     }
-  }
+  };
   return (
-    <div className="Jumbo">
-      <div className="container">
+    <Page>
+      <div className="Jumbo">
         <motion.h2
-          initial="hidden"
-          animate="visible"
-          transition={{ type: 'spring', damping: 20, stiffness: 300, delay: 0.5 }}
-          // initial={false}
+          initial="hiddenJumbo"
+          animate="visibleJumbo"
           variants={variants}
           className="Jumbo__description"
         >
-          <span className="Jumbo__name">I'm Brandon.</span>
-          <br />
-          I'm a UI Developer curating experiences that are pleasing and
-          accessible.
+          <span className="Jumbo__name">Brandon - </span>
+          UI Developer curating experiences that are pleasing and accessible.
         </motion.h2>
       </div>
-    </div>
+    </Page>
   );
 };
 

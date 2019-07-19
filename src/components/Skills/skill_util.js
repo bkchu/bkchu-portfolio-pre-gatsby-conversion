@@ -25,9 +25,29 @@ export default [
     url: 'https://redux.js.org'
   },
   {
+    skill: 'Angular',
+    img: 'https://angular.io/assets/images/logos/angular/angular.svg',
+    url: 'https://angular.io/'
+  },
+  {
+    skill: 'Sass',
+    img: sass_svg,
+    url: 'https://sass-lang.com'
+  },
+  {
     skill: 'ES6+',
     img: javascript_svg,
     url: 'https://es6.io'
+  },
+  {
+    skill: 'CSS3',
+    img: css_svg,
+    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3'
+  },
+  {
+    skill: 'HTML5',
+    img: html_svg,
+    url: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5'
   },
   {
     skill: 'Express',
@@ -65,23 +85,8 @@ export default [
     url: 'https://www.npmjs.com'
   },
   {
-    skill: 'Sass',
-    img: sass_svg,
-    url: 'https://sass-lang.com'
-  },
-  {
     skill: 'Firebase',
     img: firebase_svg,
     url: 'https://firebase.google.com'
-  },
-  {
-    skill: 'CSS3',
-    img: css_svg,
-    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3'
-  },
-  {
-    skill: 'HTML5',
-    img: html_svg,
-    url: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5'
   }
 ];

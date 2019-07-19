@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const Footer = () => {
   const footerVariants = {
     hidden: {
-      y: 50,
+      y: '100%',
       opacity: 0,
       transition: {
         y: { stiffness: 1000 }
@@ -16,8 +16,8 @@ const Footer = () => {
       y: 0,
       opacity: 1,
       transition: {
-        delay: 1.35,
-        y: { stiffness: 1000, velocity: -100 }
+        delay: 1,
+        y: { type: 'spring', stiffness: 20 }
       }
     }
   };
@@ -28,17 +28,6 @@ const Footer = () => {
       variants={footerVariants}
       className="Footer"
     >
-      <div className="Footer__contact">
-        <a className="link Footer__info" href="tel:4693890119">
-          <p>(469) 389-0119</p>
-        </a>
-        <a
-          className="link Footer__info"
-          href="mailto:brandon.k.chung@gmail.com"
-        >
-          <p>brandon.k.chung@gmail.com</p>
-        </a>
-      </div>
       <div className="Footer__networks">
         <a
           href="https://github.com/bkchu"
@@ -55,6 +44,17 @@ const Footer = () => {
           className="network link"
         >
           <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
+        </a>
+      </div>
+      <div className="Footer__contact">
+        <a className="link Footer__info" href="tel:4693890119">
+          <p>(469) 389-0119</p>
+        </a>
+        <a
+          className="link Footer__info"
+          href="mailto:brandon.k.chung@gmail.com"
+        >
+          <p>brandon.k.chung@gmail.com</p>
         </a>
       </div>
     </motion.div>

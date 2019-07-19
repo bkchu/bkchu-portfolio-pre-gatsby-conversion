@@ -193,8 +193,7 @@ body {
     justify-content: center;
     align-items: center; }
   .Navbar__logo {
-    width: 2.5rem;
-    transition: all 300ms; }
+    width: 2.5rem; }
   .Navbar__nav {
     display: flex;
     align-items: center;
@@ -306,45 +305,31 @@ body {
     width: 2rem; }
 
 .Jumbo {
-  position: fixed;
-  margin-top: 35vh;
+  margin-top: 50vh;
   left: 1rem;
   display: flex;
   align-items: center;
   background: white;
   /* fallback for old browsers */
   color: #282525; }
-  .Jumbo__name {
+  .Jumbo__name, .Jumbo__description {
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 5rem;
     font-weight: 700;
     letter-spacing: 0px;
-    line-height: unset;
-    text-transform: none; }
+    line-height: 6rem;
+    text-transform: none;
+    max-width: 85%; }
     @media only screen and (min-width: 50em) {
-      .Jumbo__name {
+      .Jumbo__name, .Jumbo__description {
         font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-        font-size: 7rem;
+        font-size: 9rem;
         font-weight: 700;
         letter-spacing: 0px;
-        line-height: unset;
+        line-height: 11rem;
         text-transform: none; } }
   .Jumbo__description {
-    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 4rem;
-    font-weight: 400;
-    letter-spacing: 0px;
-    line-height: 1.2em;
-    text-transform: none;
-    max-width: 75%; }
-    @media only screen and (min-width: 50em) {
-      .Jumbo__description {
-        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-        font-size: 5rem;
-        font-weight: 400;
-        letter-spacing: 0px;
-        line-height: 1.2em;
-        text-transform: none; } }
+    font-weight: 400; }
 
 .Page {
   position: relative;
@@ -774,10 +759,11 @@ body {
   align-items: flex-start;
   align-content: space-between;
   padding: 3rem;
-  height: 20rem; }
+  height: 20rem;
+  background: #282525; }
   @media only screen and (min-width: 37.5em) {
     .Footer {
-      height: 10rem;
+      height: 9rem;
       flex-direction: row;
       align-items: center; } }
   .Footer__contact {
@@ -790,7 +776,7 @@ body {
         flex-direction: row; } }
   .Footer__info.link {
     display: inline-block;
-    color: #282525;
+    color: white;
     text-decoration: none; }
     .Footer__info.link p {
       font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -800,19 +786,27 @@ body {
       line-height: unset;
       text-transform: none;
       letter-spacing: 1px;
-      margin: 5px 10px; }
+      margin: 5px 0;
+      margin-right: 20px; }
+      @media only screen and (min-width: 37.5em) {
+        .Footer__info.link p {
+          margin-left: 20px;
+          mnargin-right: 0; } }
   .Footer__networks {
     display: flex; }
     .Footer__networks .network {
-      padding: 7px;
-      border-radius: 50%;
-      color: #282525;
-      margin-right: 5px;
+      height: 100%;
+      color: white;
+      margin-right: 20px;
       display: block;
       transition: all 300ms; }
+      @media only screen and (min-width: 37.5em) {
+        .Footer__networks .network {
+          margin-right: 0;
+          margin-left: 20px; } }
       .Footer__networks .network:hover {
         background: #282525;
         color: white; }
       .Footer__networks .network svg {
-        height: 25px;
-        width: 25px; }
+        height: 2.5rem;
+        width: 2.5rem; }

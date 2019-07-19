@@ -35,10 +35,27 @@ class Navbar extends Component {
 
     const variants = {
       open: {
-        transition: { staggerChildren: 0.07, delayChildren: 1 }
+        transition: { staggerChildren: 0.10, delayChildren: 1 }
       },
       closed: {
         transition: { staggerChildren: 0.05, staggerDirection: -1 }
+      }
+    };
+
+    const logoVariants = {
+      spinning: {
+        rotate: [0, 360, 360, 360, 360, 360, 360, 360],
+        scale: [1, 1, 1, 1, 1.2, 1, 1.2, 1],
+        transition: {
+          duration: 10,
+          times: [0, 0.1, 0.2, 0.55, 0.56, 0.57, 0.58, 0.59],
+          loop: Infinity,
+          stiffness: 300,
+          ease: 'easeInOut'
+        }
+      },
+      rest: {
+        rotate: 0
       }
     };
 
@@ -79,7 +96,14 @@ class Navbar extends Component {
             to="/"
             className="Navbar__logo-link link"
           >
-            <img className="Navbar__logo" src={Logo} alt="brand" />
+            <motion.img
+              initial="rest"
+              animate="spinning"
+              variants={logoVariants}
+              className="Navbar__logo"
+              src={Logo}
+              alt="brand"
+            />
           </NavItem>
           <motion.div
             initial="closed"

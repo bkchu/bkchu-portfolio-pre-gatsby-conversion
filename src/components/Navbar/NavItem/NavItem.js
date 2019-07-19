@@ -16,21 +16,21 @@ const NavItem = ({
       y: 0,
       opacity: 1,
       transition: {
-        y: { stiffness: 1000, velocity: -100 }
+        y: { type: 'spring', stiffness: 30 }
       }
     },
     closed: {
-      y: 20,
+      y: 10,
       opacity: 0,
       transition: {
-        y: { stiffness: 1000 }
+        y: { stiffness: 20 }
       }
     },
     logoOpen: {
       y: 0,
       opacity: 1,
       transition: {
-        y: { stiffness: 1000, velocity: -100 },
+        y: { type: 'spring', stiffness: 20 },
         delay: 0.93
       }
     },
@@ -50,6 +50,8 @@ const NavItem = ({
       onClick={!!onClick ? onClick : () => props.history.push(to)}
       animate={animate}
       initial={initial}
+      role="link"
+      tabIndex="0"
     >
       {children}
     </motion.a>
