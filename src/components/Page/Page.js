@@ -11,7 +11,7 @@ class Page extends Component {
 
     const pageVariants = {
       hidden: {
-        y: 50,
+        y: 20,
         opacity: 0,
         transition: {
           y: { stiffness: 1000 }
@@ -22,7 +22,7 @@ class Page extends Component {
         opacity: 1,
         transition: {
           delay: 0.75,
-          y: { stiffness: 1000, velocity: -100 }
+          y: { type: 'spring', stiffness: 20 }
         }
       },
       exiting: {
