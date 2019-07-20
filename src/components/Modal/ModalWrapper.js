@@ -37,7 +37,7 @@ class ModalWrapper extends Component {
         y: 0,
         opacity: 1,
         transition: {
-          duration: 0.2
+          y: { type: 'spring', stiffness: 50 }
         }
       },
       closed: {
