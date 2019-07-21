@@ -41,7 +41,12 @@ const ProjectModal = props => {
         </div>
         <h1 className="ProjectModal__title">{title}</h1>
         <p className="ProjectModal__year">{year}</p>
-        <a className="ProjectModal__link link" target="_blank" href={url}>
+        <a
+          className="ProjectModal__link link"
+          target="_blank"
+          rel="noopener noreferrer"
+          href={url}
+        >
           {url}
         </a>
         {displayCredentials()}

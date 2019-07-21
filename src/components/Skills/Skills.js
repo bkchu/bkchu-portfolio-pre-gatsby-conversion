@@ -42,7 +42,12 @@ const Skills = () => {
           skills.map(({ skill, img, url }, i) => (
             <motion.div variants={skillVariants} className="Skill" key={i}>
               <p className="Skill__title">{skill}</p>
-              <a className="Skill__link" href={url} target="_blank">
+              <a
+                className="Skill__link"
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img className="Skill__img" src={img} alt={skill} />
               </a>
             </motion.div>

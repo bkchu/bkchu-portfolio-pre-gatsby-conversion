@@ -16,7 +16,11 @@ const Project = props => {
 
   return (
     <div key={title} className="Project">
-      <div onClick={() => props.projectModal(props.project)} style={{ background: color }} className="Project__img-container">
+      <div
+        onClick={() => props.projectModal(props.project)}
+        style={{ background: color }}
+        className="Project__img-container"
+      >
         <img className="Project__img" src={img} alt={title} />
       </div>
       <h1
@@ -26,7 +30,12 @@ const Project = props => {
         {title}
       </h1>
       <p className="Project__year">{year}</p>
-      <a className="Project__link link" target="_blank" href={url}>
+      <a
+        className="Project__link link"
+        target="_blank"
+        rel="noopener noreferrer"
+        href={url}
+      >
         {url}
       </a>
       <p className="Project__description">{description}</p>

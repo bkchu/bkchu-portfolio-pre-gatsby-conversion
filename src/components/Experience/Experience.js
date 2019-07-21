@@ -14,7 +14,12 @@ const Experience = () => {
         <h1 className="Experience__title">{experience}</h1>
         <p className="Experience__year">{date}</p>
         {!!url && (
-          <a className="Experience__link link" target="_blank" href={url}>
+          <a
+            className="Experience__link link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={url}
+          >
             {url}
           </a>
         )}
