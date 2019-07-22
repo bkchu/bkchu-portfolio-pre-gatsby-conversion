@@ -35,7 +35,7 @@ class Navbar extends Component {
 
     const variants = {
       open: {
-        transition: { staggerChildren: 0.10, delayChildren: 1 }
+        transition: { staggerChildren: 0.1, delayChildren: 1 }
       },
       closed: {
         transition: { staggerChildren: 0.05, staggerDirection: -1 }

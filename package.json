@@ -1,6 +1,6 @@
 {
-  "homepage": "https://bkchu.github.io/",
-  "name": "portfolio",
+  "homepage": "https://www.bkchu.dev/",
+  "name": "brandon-chung-ui-developer-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,9 +14,10 @@
     "npm-run-all": "^4.1.3",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-ga": "^2.6.0",
     "react-redux": "^5.1.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "3.0.0",
+    "react-scripts": "3.0.1",
     "redux": "^4.0.1"
   },
   "scripts": {
