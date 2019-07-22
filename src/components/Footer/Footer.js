@@ -52,9 +52,9 @@ const Footer = () => {
         </a>
         <a
           className="link Footer__info"
-          href="mailto:brandon.k.chung@gmail.com"
+          href="mailto:brandon@bkchu.dev"
         >
-          <p>brandon.k.chung@gmail.com</p>
+          <p>brandon@bkchu.dev</p>
         </a>
       </div>
     </motion.div>
