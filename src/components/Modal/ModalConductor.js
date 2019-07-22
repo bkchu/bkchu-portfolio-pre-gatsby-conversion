@@ -10,7 +10,7 @@ const ModalConductor = props => {
     case 'PROJECT_MODAL':
       return <ProjectModal {...props} />;
     case 'CONTACT_MODAL':
-      ReactGA.modalview('/about/contact-us');
+      ReactGA.modalview('/contact');
       return <ContactModal {...props} />;
     // case "HIDE_MODAL":
     //   return <div />;
