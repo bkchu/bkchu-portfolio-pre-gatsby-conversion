@@ -5,7 +5,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import ReactGA from 'react-ga';
 
-ReactGA.initialize('UA-000000-01');
+ReactGA.initialize('UA-85177244-2');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 if (window.location.href === 'https://bkchu.github.io/') {
