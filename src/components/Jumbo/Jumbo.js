@@ -23,15 +23,15 @@ const Jumbo = () => {
   return (
     <Page>
       <div className="Jumbo">
-        <motion.h2
+        <motion.h1
           initial="hiddenJumbo"
           animate="visibleJumbo"
           variants={variants}
           className="Jumbo__description"
         >
-          <span className="Jumbo__name">Brandon - </span>
+          <span className="Jumbo__name">Brandon Chung - </span>
           UI Developer curating experiences that are pleasing and accessible.
-        </motion.h2>
+        </motion.h1>
       </div>
     </Page>
   );
