@@ -34,6 +34,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           target="_blank"
           className="network link"
+          aria-label="GitHub"
         >
           <FontAwesomeIcon icon={faGithub} size="lg" />
         </a>
@@ -42,6 +43,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           target="_blank"
           className="network link"
+          aria-label="LinkedIn"
         >
           <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
         </a>
